@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('image.png'); /* Adding the background image */
+    background-size: cover; /* This will ensure that the image covers the whole area */
+    background-position: center; /* This will center the image in the body */
+    background-repeat: no-repeat;
+}
+
+.calculator {
+    background-color: #fff; /* white background */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* subtle shadow for a 3D effect */
+    padding: 20px;
+    width: 300px; /* fixed width */
+
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: center;
+}
+
+.calculator .display {
+    background-color: #e0e0e0; /* light gray background for display */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: right; /* align numbers to the right */
+    border-radius: 5px;
+    font-size: 2em; /* larger font size for better visibility */
+    overflow-x: auto; /* allows scrolling for long numbers */
+}
+
+.calculator .buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* create a 4x4 grid layout */
+    gap: 10px; /* space between buttons */
+}
+
+.calculator button {
+    background-color: #4CAF50; /* green background for buttons */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 0; /* vertical padding */
+    font-size: 1.5em; /* larger font for buttons */
+    color: white; /* white text color */
+    cursor: pointer; /* change cursor to indicate clickable */
+    transition: background-color 0.3s; /* smooth background color transition */
+}
+
+.calculator button:hover {
+    background-color: rgb(10, 188, 197); /* slightly darker green on hover */
+}
+.calculator button:active {
+    background-color: rgb(5, 75, 160); /* even darker green on click */
+    /* Other styles for the onclick effect */
+}
