@@ -63,6 +63,19 @@ function calculate() {
     updateDisplay();
 }
 
+function calculateSquareRoot() {
+    if (currentOperand === '') return;
+    let value = parseFloat(currentOperand);
+    if (isNaN(value) || value < 0) {
+        displayError();
+        return;
+    }
+    currentOperand = `√${currentOperand} = ${Math.sqrt(value).toString().substring(0, 8)}`;
+    updateDisplay();
+    currentOperand = '';
+    previousOperand = '';
+    operation = null;
+}
 
 function updateDisplay() {
     if (currentOperand !== '') {
